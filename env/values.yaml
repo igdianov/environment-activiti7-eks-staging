@@ -21,7 +21,7 @@ global:
       certmanager.k8s.io/issuer: letsencrypt-prod
     domain: activiti7-eks.youbpm.com
     host: activiti-cloud-gateway.{{ .Release.Namespace }}.{{ .Values.global.gateway.domain }}
-    http: true
+    http: false
   keycloak:
     client: activiti
     host: ""
