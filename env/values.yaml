@@ -13,16 +13,15 @@ expose:
   config:
     domain: activiti7-eks.youbpm.com
     exposer: Ingress
-    http: "false"
-    tlsacme: "true"
+    http: "true"
+    tlsacme: "false"
 global:
   gateway:
     annotations:
       certmanager.k8s.io/issuer: letsencrypt-prod
     domain: activiti7-eks.youbpm.com
-    host: activiti-cloud-gateway.{{ .Release.Namespace }}.{{ .Values.global.gateway.domain
-      }}
-    http: false
+    host: activiti-cloud-gateway.{{ .Release.Namespace }}.{{ .Values.global.gateway.domain }}
+    http: true
   keycloak:
     client: activiti
     host: ""
