@@ -19,7 +19,7 @@ global:
   gateway:
     annotations:
       certmanager.k8s.io/issuer: letsencrypt-prod
-    domain: nip.io
+    domain: "activiti7-eks.youbpm.com"
     host: activiti-cloud-gateway.{{ .Release.Namespace }}.{{ .Values.global.gateway.domain
       }}
     http: false
